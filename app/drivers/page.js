@@ -1,43 +1,95 @@
-import { Flag, Search, UserRound } from "lucide-react";
 import { PageHero, SectionTitle } from "../../components/ui";
 
 const drivers = [
-  ["01", "ALEX", "MARTIN", "BEL"],
-  ["07", "NOAH", "DUBOIS", "FRA"],
-  ["11", "LUKAS", "WEBER", "DEU"],
-  ["16", "MATEO", "ROSSI", "ITA"],
-  ["22", "LINA", "VAN HOVE", "BEL"],
-  ["27", "OSCAR", "JANSEN", "NLD"],
-  ["31", "MILA", "SCHMITZ", "LUX"],
-  ["44", "ELI", "TURNER", "GBR"],
-  ["55", "EMMA", "LAURENT", "FRA"],
-  ["63", "JONAS", "KELLER", "DEU"],
-  ["71", "LOUIS", "REMY", "BEL"],
-  ["88", "SARA", "CONTI", "ITA"],
+  ["Laurits Juul", "Denmark", "BGK Elite", "Junior (under 18)"],
+  ["Ziemowit Werra", "Poland", "Not specified", "Junior (under 18)"],
+  ["Jonny Elliott", "United Kingdom", "Valor Racing", "General"],
+  ["Théo Di Vincenzo", "Belgium", "MRK Lyons / Apex Racing", "Junior (under 18)"],
+  ["Adrien Travaglini", "Belgium", "Apex Racing Team", "Junior (under 18)"],
+  ["Maxim Gounaropoulos", "Belgium", "Apex Racing", "General"],
+  ["Jayden Poelvoorde", "Belgium", "Talent Factory", "Junior (under 18)"],
+  ["Lucas Bessot", "Belgium", "Not specified", "Junior (under 18)"],
+  ["Antoine Laurent", "France", "Driver Performance Lab", "General"],
+  ["Valdemar Andersen", "Denmark", "BGK Elite", "General"],
+  ["Nikolaj Marsengo", "Denmark", "BGK Elite", "General"],
+  ["Luca de Wilde", "Netherlands", "Chrono Motorsport", "General"],
+  ["William Legat", "Belgium", "Not specified", "Junior (under 18)"],
+  ["Stefano Vochten", "Belgium", "Talent Factory", "Junior (under 18)"],
+  ["Graeven", "Belgium", "MRK Evolution", "General"],
+  ["Esteban Vochten", "Belgium", "Talent Factory", "Junior (under 18)"],
+  ["Daan Kon", "Netherlands", "Den Hartog Racing", "General"],
+  ["Igor Tworek", "Poland", "Not specified", "Junior (under 18)"],
+  ["Iwo Gurdak", "Poland", "Cool Bear Racing", "Junior (under 18)"],
+  ["Maxime Marguerite", "France", "Driver Performance Lab", "General"],
+  ["Mikkel Piper Frimann", "Denmark", "BGK", "General"],
+  ["Louise Braune", "Belgium", "MRK Lyons", "Women"],
+  ["Leandro Marzullo", "Belgium", "Not specified", "Junior (under 18)"],
+  ["Max van Laar", "Netherlands", "Chrono Motorsport", "General"],
+  ["Thies Wibbelink", "Netherlands", "Talent Factory", "General"],
+  ["Arthur Scherer", "Belgium", "PRT", "General"],
+  ["Samuel Erdelt", "Germany", "Apex Racing", "Junior (under 18)"],
+  ["Milan Hansen", "Denmark", "BGK Elite", "General"],
+  ["Joakim Schreurs", "Belgium", "PRT", "General"],
+  ["Lucas Scherer", "Belgium", "PRT", "General"],
+  ["Jolano Schaepkens", "Netherlands", "Talent Factory", "Junior (under 18)"],
+  ["Kiran Kennis", "Belgium", "Talent Factory", "General"],
+  ["Nohan Bovy", "Belgium", "Not specified", "Junior (under 18)"],
+  ["Milan de Wilde", "Netherlands", "Chrono Motorsport", "General"],
+  ["Christopher Knight", "United Kingdom", "Valor Racing", "General"],
+  ["Benjamin Kaivers", "Belgium", "MRK Lyons", "General"],
+  ["Martin Harders", "Denmark", "Not specified", "General"],
+  ["Jort Peereboom", "Netherlands", "Chrono Motorsport", "Junior (under 18)"],
+  ["Alessio Albano", "Belgium", "Not specified", "Junior (under 18)"],
+  ["Elia Schmidt", "Germany", "Go Hard Racing", "Junior (under 18)"],
+  ["Malte Dyrup", "Denmark", "Not specified", "Junior (under 18)"],
+  ["Nicolai Dyrup", "Denmark", "DRT", "Masters (40+)"],
+  ["Lucas Olivier", "Belgium", "LUCAS.O", "Junior (under 18)"],
+  ["Mikołaj Kołakowski", "Poland", "GPKart Racing Team", "General"],
+  ["Jazz Nouwkens", "Belgium", "PSG Racing", "Junior (under 18)"],
+  ["Bertil Jensen Schönwiese", "Denmark", "BGK Elite", "General"],
+  ["Youness Rami", "Belgium", "Not specified", "General"],
 ];
 
 export default function DriversPage() {
   return (
     <>
-      <PageHero eyebrow="Entry list · Provisional" title="Meet the grid" text="A field of sharp rental kart racers, ready to fight for every tenth. Final entries will be confirmed ahead of race weekend." />
+      <PageHero
+        eyebrow="Entry list · Provisional"
+        title="Meet the grid"
+        text="A field of sharp rental kart racers, ready to fight for every tenth. Final entries will be confirmed ahead of race weekend."
+      />
       <section className="bg-black py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionTitle eyebrow="Confirmed starters" title="Driver roster." copy="The first wave of competitors is locked in. Grid additions will appear here as registrations are approved." />
+          <SectionTitle
+            eyebrow="Confirmed starters"
+            title="Driver roster."
+            copy="Registered drivers are listed below. This provisional list is updated as entries are reviewed."
+          />
           <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-            {drivers.map(([number, first, last, nation]) => (
-              <article key={number} className="group relative overflow-hidden bg-neutral-950 p-5 transition hover:bg-[#141414]">
-                <span className="absolute right-[-6px] top-[-12px] font-display text-8xl font-black italic tracking-tighter text-white/[.035] transition group-hover:text-red-600/10">{number}</span>
-                <div className="relative flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center border border-red-600/30 bg-red-600/10 font-display text-xl font-black italic text-red-500">{number}</div>
-                  <div>
-                    <p className="text-[10px] font-black tracking-[.18em] text-neutral-600">{nation}</p>
-                    <h3 className="mt-1 font-display text-xl font-black uppercase italic">{first} <span className="text-red-500">{last}</span></h3>
-                  </div>
+            {drivers.map(([name, nationality, team, category]) => (
+              <article key={name} className="bg-neutral-950 p-5 transition hover:bg-[#141414]">
+                <p className="text-[10px] font-black uppercase tracking-[.18em] text-red-500">
+                  {nationality}
+                </p>
+                <h3 className="mt-2 font-display text-xl font-black uppercase italic">
+                  {name}
+                </h3>
+                <div className="mt-5 space-y-2 border-t border-white/10 pt-4 text-xs">
+                  <p className="flex justify-between gap-4 text-neutral-500">
+                    <span className="font-bold uppercase tracking-[.12em]">Team</span>
+                    <span className="text-right text-neutral-300">{team}</span>
+                  </p>
+                  <p className="flex justify-between gap-4 text-neutral-500">
+                    <span className="font-bold uppercase tracking-[.12em]">Category</span>
+                    <span className="text-right text-neutral-300">{category}</span>
+                  </p>
                 </div>
               </article>
             ))}
           </div>
-          <p className="mt-6 text-xs text-neutral-600">Demo entry list. Official confirmed drivers will replace this roster as race control approves registrations.</p>
+          <p className="mt-6 text-xs text-neutral-600">
+            {drivers.length} unique registrations currently listed. Team details marked “Not specified” were not provided in the registration form.
+          </p>
         </div>
       </section>
     </>
