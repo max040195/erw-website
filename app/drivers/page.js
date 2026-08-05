@@ -50,6 +50,16 @@ const drivers = [
   ["Youness Rami", "Belgium", "Not specified", "General"],
 ];
 
+const flags = {
+  Belgium: "🇧🇪",
+  Denmark: "🇩🇰",
+  France: "🇫🇷",
+  Germany: "🇩🇪",
+  Netherlands: "🇳🇱",
+  Poland: "🇵🇱",
+  "United Kingdom": "🇬🇧",
+};
+
 export default function DriversPage() {
   return (
     <>
@@ -69,7 +79,7 @@ export default function DriversPage() {
             {drivers.map(([name, nationality, team, category]) => (
               <article key={name} className="bg-neutral-950 p-5 transition hover:bg-[#141414]">
                 <p className="text-[10px] font-black uppercase tracking-[.18em] text-red-500">
-                  {nationality}
+                  {flags[nationality]} {nationality}
                 </p>
                 <h3 className="mt-2 font-display text-xl font-black uppercase italic">
                   {name}
