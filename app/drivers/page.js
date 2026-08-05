@@ -51,13 +51,13 @@ const drivers = [
 ];
 
 const flags = {
-  Belgium: "🇧🇪",
-  Denmark: "🇩🇰",
-  France: "🇫🇷",
-  Germany: "🇩🇪",
-  Netherlands: "🇳🇱",
-  Poland: "🇵🇱",
-  "United Kingdom": "🇬🇧",
+  Belgium: "be",
+  Denmark: "dk",
+  France: "fr",
+  Germany: "de",
+  Netherlands: "nl",
+  Poland: "pl",
+  "United Kingdom": "gb",
 };
 
 export default function DriversPage() {
@@ -79,7 +79,12 @@ export default function DriversPage() {
             {drivers.map(([name, nationality, team, category]) => (
               <article key={name} className="bg-neutral-950 p-5 transition hover:bg-[#141414]">
                 <p className="text-[10px] font-black uppercase tracking-[.18em] text-red-500">
-                  {flags[nationality]} {nationality}
+                  <img
+                    src={`https://flagcdn.com/24x18/${flags[nationality]}.png`}
+                    alt={`${nationality} flag`}
+                    className="mr-2 inline-block h-3 w-4 object-cover align-[-2px]"
+                  />
+                  {nationality}
                 </p>
                 <h3 className="mt-2 font-display text-xl font-black uppercase italic">
                   {name}
@@ -97,9 +102,6 @@ export default function DriversPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-xs text-neutral-600">
-            {drivers.length} unique registrations currently listed. Team details marked “Not specified” were not provided in the registration form.
-          </p>
         </div>
       </section>
     </>
