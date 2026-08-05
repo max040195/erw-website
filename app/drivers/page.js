@@ -15,7 +15,7 @@ const drivers = [
   ["Luca de Wilde", "Netherlands", "Chrono Motorsport", "General"],
   ["William Legat", "Belgium", "Not specified", "Junior (under 18)"],
   ["Stefano Vochten", "Belgium", "Talent Factory", "Junior (under 18)"],
-  ["Graeven", "Belgium", "MRK Evolution", "General"],
+  ["Gregory Graeven", "Belgium", "MRK Evolution", "Master"],
   ["Esteban Vochten", "Belgium", "Talent Factory", "Junior (under 18)"],
   ["Daan Kon", "Netherlands", "Den Hartog Racing", "General"],
   ["Igor Tworek", "Poland", "Not specified", "Junior (under 18)"],
