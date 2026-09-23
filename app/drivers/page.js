@@ -1,6 +1,6 @@
 import { PageHero, SectionTitle } from "../../components/ui";
 
-const drivers = [
+export const drivers = [
   ["Laurits Juul", "Denmark", "BGK Elite", "Junior (under 18)"],
   ["Ziemowit Werra", "Poland", "Not specified", "Junior (under 18)"],
   ["Jonny Elliott", "United Kingdom", "Valor Racing", "General"],
