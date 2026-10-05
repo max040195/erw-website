@@ -28,6 +28,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdI6G9ifzZfCkr--Br_pUXWHUg9ngXYYjP4y9k_BHn2jPD3RQ/viewform?usp=header" target="_blank" rel="noreferrer" className="inline-flex -skew-x-12 items-center gap-2 bg-red-600 px-6 py-4 text-xs font-black uppercase tracking-[.18em] transition hover:bg-red-500"><span className="skew-x-12">Register now · €279</span></a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScAvcY5ULhrDERtKehVskvMarFnxj7nth2MN4HKyU75kbMOkQ/viewform?fbzx=-5429230602291440917" target="_blank" rel="noreferrer" className="inline-flex -skew-x-12 items-center gap-2 bg-red-600 px-6 py-4 text-xs font-black uppercase tracking-[.18em] transition hover:bg-red-500"><span className="skew-x-12">BOOK PRACTICE · €20</span></a>
+            <RaceButton href="/schedule" secondary>Race schedule</RaceButton>
             <RaceButton href="/event" secondary>Discover the event</RaceButton>
           </div>
 
