@@ -1,4 +1,4 @@
-import { AlertTriangle, CheckCircle2, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { PageHero, SectionTitle } from "../../components/ui";
 
 const rules = [
@@ -17,7 +17,7 @@ export default function RulesPage() {
       <PageHero eyebrow="Sporting code" title="Race hard. Race fair." text="Clear rules make close racing possible. Read the essentials before you arrive and listen carefully at the mandatory briefing." />
       <section className="track-grid bg-black py-20">
         <div className="mx-auto max-w-5xl px-5">
-          <SectionTitle eyebrow="Core regulations" title="The rulebook." copy="This summary is your starting point. The final sporting document will be issued to registered drivers before the event." />
+          <SectionTitle eyebrow="Core regulations" title="The rulebook." copy="Read the essential rules below, then download the official regulations before the event." />
           <div className="grid gap-3">
             {rules.map(([number, title, text]) => (
               <article key={number} className="grid gap-4 border border-white/10 bg-neutral-950 p-5 transition hover:border-red-600/40 sm:grid-cols-[52px_1fr]">
@@ -26,10 +26,10 @@ export default function RulesPage() {
               </article>
             ))}
           </div>
-          <div className="mt-8 flex gap-3 border border-amber-500/30 bg-amber-500/5 p-5 text-sm leading-6 text-amber-100/70">
-            <AlertTriangle className="h-5 w-5 shrink-0 text-amber-500" />
-            <p>The downloadable official regulations are being finalized. This page is an event overview and does not replace the final sporting document.</p>
-          </div>
+          <a href="/ERW_Reglement_site_EN_FR.pdf" download className="mt-8 inline-flex -skew-x-12 items-center gap-2 bg-red-600 px-6 py-4 text-xs font-black uppercase tracking-[.16em] transition hover:bg-red-500">
+            <span className="skew-x-12">Download official regulations - PDF</span>
+            <FileText className="h-4 w-4 skew-x-12" />
+          </a>
         </div>
       </section>
     </>
